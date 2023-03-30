@@ -12,12 +12,14 @@ def hello_world():  # put application's code here
 def hello():
     return render_template('hello.html')
 
+
 @app.route('/favorite-course')
 def favorite_course():
     print('Course subject entered: ' + request.args.get('subject_name'))
     print('Course number entered: ' + request.args.get('course_number'))
 
     return render_template('favorite-course.html')
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
